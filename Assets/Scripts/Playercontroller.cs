@@ -5,6 +5,7 @@ public class Playercontroller : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
     private float movementY;
+    public float speed = 0;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class Playercontroller : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement);
+        rb.AddForce(movement * speed);
     }
 
    
